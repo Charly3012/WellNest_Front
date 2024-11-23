@@ -1,0 +1,44 @@
+/* Contenedor general para la estructura */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Estilo para la sección de contenido (Main y Sidebar) */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+}
+/* Sidebar (a la izquierda) */
+app-sidebar {
+  flex: .3; /* Sidebar ocupa menos espacio */
+  padding: 20px;
+  color: white;
+  overflow-y: auto; /* Permite scroll en el Sidebar si hay más contenido */
+}
+
+/* Main Area */
+.main {
+  flex: 3; /* Hace que Main ocupe más espacio */
+  padding: 20px;
+  background-color: #f4f4f4; /* Color de fondo claro */
+  overflow-y: auto; /* Permite hacer scroll si es necesario */
+  margin-left: 20px; /* Espacio entre Main y Sidebar */
+}
+
+/* Estilo para el Header y Footer */
+app-header, app-footer {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer: Opcional, con el mismo estilo de Header */
+app-footer {
+  background-color: #333;
+  color: white;
+}
