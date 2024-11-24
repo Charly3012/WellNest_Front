@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Credentials } from './models/creds';
+import { Token } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -22,22 +23,14 @@ export class AuthServiceService {
       const body = response.body;
       const headers = response.headers;
 
-      //const baererToken = body.get('token');
       console.log(body);
       localStorage.setItem('token', body.token);
-      return body;
-
     }))
   }
 
-  register(data: {
-    name: string;
-    email: string;
-    nickname: string;
-    bornDate: string;
-    password: string;
-  }): Observable<any> {
-    return this.http.post(`${this.apiUrl}/auth/register`, data);
+
+  getToken(){
+    return localStorage.getItem('token');
   }
 
 }
