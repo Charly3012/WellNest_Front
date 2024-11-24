@@ -13,7 +13,7 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   getHolaMundo(): Observable<any>{
-    return this.http.get<any>(this.apiUrl + "api/v1/demo/holaMundo");
+    return this.http.get<any>(this.apiUrl + "/api/v1/demo/holaMundo");
   }
 
 }
