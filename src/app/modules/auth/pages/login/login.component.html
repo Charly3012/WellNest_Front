@@ -1,11 +1,22 @@
-<div class="login-form">
-  <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
-    <label for="email">Email</label>
-    <input id="email" name="email" [(ngModel)]="creds.email" required />
-
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" [(ngModel)]="creds.password" required />
-
-    <button type="submit">Login</button>
-  </form>
-</div>
+<body>
+  <div id="login-container">
+    <h1>Tu viaje de autoconocimiento comienza aquí</h1>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        
+        <div class="txtbx-group">
+            <input id="email" name="email" [(ngModel)]="creds.email" required  placeholder="Ingresa tu email">
+            <input id="password" type="password" name="password" [(ngModel)]="creds.password" required placeholder="Ingresa tu contraseña">
+        </div>
+        
+  
+        <div class="button-group">
+        <button type="submit" id="button-inicio">Iniciar sesión</button>
+        <hr class="line-decorator">
+        <button (click)="navigateToRegister()" type="submit" id="button-crear">Crear Cuenta</button>
+        </div>
+    </form>
+  
+  
+  </div>
+  
+</body>
