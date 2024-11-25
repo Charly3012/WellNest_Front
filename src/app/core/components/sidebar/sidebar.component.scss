@@ -1,0 +1,32 @@
+.sidebar{
+    place-items: center;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+nav ul li a{
+    color: var(--font-color);
+    display: inline-block;
+    padding: 15px ;
+    text-transform: capitalize;
+    text-decoration: none;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+nav ul{
+    list-style: none;
+}
+.sidebar-nav {
+    color: var(--font-color);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 15px;
+}

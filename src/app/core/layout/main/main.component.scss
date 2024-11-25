@@ -17,10 +17,11 @@
 app-sidebar {
   flex: .3;
   /* Sidebar ocupa menos espacio */
-  padding: 20px;
-  color: white;
+  padding: 15px;
+  background-color: var(--background-color);
   overflow-y: auto;
-  /* Permite scroll en el Sidebar si hay más contenido */
+  /* Permite scroll 
+  en el Sidebar si hay más contenido */
 }
 
 /* Main Area */
