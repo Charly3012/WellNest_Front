@@ -31,7 +31,7 @@ import { AuthModule } from '../modules/auth/auth.module';
     ContentComponent,
     MainComponent,
     AuthLayoutComponent,
-    AuthModule
+    AuthModule,
   ]
 })
 export class CoreModule { }
