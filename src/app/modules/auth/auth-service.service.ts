@@ -24,13 +24,13 @@ export class AuthServiceService {
       const headers = response.headers;
 
       console.log(body);
-      localStorage.setItem('token', body.token);
+      sessionStorage.setItem('token', body.token);
     }))
   }
 
 
   getToken(){
-    return localStorage.getItem('token');
+    return sessionStorage.getItem('token');
   }
 
 }
