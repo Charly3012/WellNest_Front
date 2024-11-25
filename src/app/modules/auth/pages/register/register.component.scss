@@ -1,0 +1,59 @@
+.register-form {
+  width: 100%;
+  max-width: 400px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el formulario horizontalmente */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.register-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.register-form input:focus {
+  border-color: #007bff; /* Cambia el borde cuando el input está en foco */
+  outline: none; /* Elimina el borde de enfoque predeterminado */
+}
+
+.register-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+  background-color: #0056b3; /* Color de fondo en el hover */
+}
+
+.register-form button:disabled {
+  background-color: #cccccc; /* Color de fondo si el botón está deshabilitado */
+  cursor: not-allowed;
+}
+
+.register-form .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+}

@@ -4,6 +4,7 @@ import { map, Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Credentials } from './models/Credentials';
 import { Token } from '@angular/compiler';
+import { RegisterData } from './models/RegisterData';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,17 @@ export class AuthServiceService {
     }))
   }
 
+  register(registerData: RegisterData): Observable<any>{
+    return this.http.post(`${this.apiUrl}/auth/register`, registerData, {
+      observe: 'response'
+    })
+    .pipe(map((reponse: HttpResponse<any>) => {
+      const body = reponse.body;
+
+      console.log(body);
+      sessionStorage.setItem('token', body.token);
+    }))
+  }
 
   getToken(){
     return sessionStorage.getItem('token');
