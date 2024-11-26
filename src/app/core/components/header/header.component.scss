@@ -34,13 +34,18 @@ nav {
 }
 
 nav ul li {
-    color: var(--font-color);
+
     list-style-type: none;
     display: inline-block;
     padding: 10px 25px;
     text-transform: capitalize;
-    text-decoration: none;
+
     position: relative;
+
+    a {
+        text-decoration: none;
+        color: var(--font-color);
+    }
 }
 
 .nav-apartado {
@@ -50,7 +55,7 @@ nav ul li {
     font-size: 25px;
 }
 
-.nav-apartado :hover {
+.nav-apartado li :hover {
     color: var(--complementary-color);
     transition: .4s;
 }
