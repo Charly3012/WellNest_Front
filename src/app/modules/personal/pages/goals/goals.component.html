@@ -1,13 +1,20 @@
 <div id="goal-container">
-<h2>Metas</h2>
-
-
-
-</div>
-
-
-<div id="goal-container">
-<h2>Logros</h2>
-
-
+    <h2>Metas</h2>
+    <input type="text" #goalInput placeholder="Añadir meta">
+    <button (click)="addGoal(goalInput.value)">Añadir</button>
+    <ul>
+      <li *ngFor="let meta of metas">
+        {{ meta.content }}
+        <input type="checkbox" (change)="markAsDone(meta.idNote)">
+      </li>
+    </ul>
+  </div>
+  
+  <div id="goal-container">
+    <h2>Logros</h2>
+    <ul>
+      <li *ngFor="let logro of logros">
+        {{ logro.content }}
+      </li>
+    </ul>
 </div>

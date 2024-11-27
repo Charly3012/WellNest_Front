@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthNotLoginGuard } from './core/guards/auth-not-login.guard';
+import { AuthYesLoginGuard } from './core/guards/auth-yes-login.guard';
+import { AuthLayoutComponent } from './core/layout/auth-layout/auth-layout.component';
 import { MainComponent } from './core/layout/main/main.component';
 import { LoginComponent } from './modules/auth/pages/login/login.component';
 import { RegisterComponent } from './modules/auth/pages/register/register.component';
-import { AuthLayoutComponent } from './core/layout/auth-layout/auth-layout.component';
-import { AuthNotLoginGuard } from './core/guards/auth-not-login.guard';
-import { AuthYesLoginGuard } from './core/guards/auth-yes-login.guard';
 
 const routes: Routes = [
   {
@@ -20,7 +20,8 @@ const routes: Routes = [
       {
         path: 'personal',
         loadChildren: () => import('./modules/personal/personal.module').then(m => m.PersonalModule)
-      }
+      },
+      { path: '', redirectTo: '/personal/goals', pathMatch: 'full' },
     ]
   },
   {
