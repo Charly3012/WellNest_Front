@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-goals',
@@ -10,6 +11,8 @@ export class GoalsComponent implements OnInit {
   metas: any[] = [];
   logros: any[] = [];
 
+  apiUrl: string = environment.apiUrl;
+
 
   constructor(private http: HttpClient) { }
 
@@ -17,16 +20,17 @@ export class GoalsComponent implements OnInit {
     this.loadGoals();
   }
   loadGoals() {
-    this.http.get<any[]>('/api/v1/demo/GetUserNotes').subscribe((notes) => {
+    this.http.get<any[]>(`${this.apiUrl}/api/v1/note/GetUserNotes`).subscribe((notes) => {
       this.metas = notes.filter(note => !note.state);
       this.logros = notes.filter(note => note.state);
     });
   }
-  
-  
+
+
   addGoal(content: string) {
     const request = { content, state: false };
-    this.http.post('/api/v1/demo/InsertNote', request).subscribe(() => this.loadGoals());
+    this.http.post(`${this.apiUrl}/api/v1/note/InsertNote`, request).subscribe(() => this.loadGoals());
+
   }
 
   markAsDone(noteId: number) {
