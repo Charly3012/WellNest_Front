@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PersonalRoutingModule } from './personal-routing.module';
 import { BinnacleComponent } from './pages/binnacle/binnacle.component';
+import { NotesComponent } from './pages/notes/notes.component';
 
 
 @NgModule({
   declarations: [
-    BinnacleComponent
+    BinnacleComponent,
+    NotesComponent
   ],
   imports: [
     CommonModule,
