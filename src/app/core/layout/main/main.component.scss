@@ -27,7 +27,8 @@ app-sidebar {
 .main {
   flex: 3;
   /* Hace que Main ocupe más espacio */
-  padding: 20px;
+  padding: 0px;
+  margin: 0px;
   background-color: #f4f4f4;
   /* Color de fondo claro */
   overflow-y: auto;
