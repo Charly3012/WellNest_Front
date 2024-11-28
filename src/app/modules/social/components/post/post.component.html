@@ -1,8 +1,22 @@
-<div class="body">
-  <div class="profile"><p class="name">Nuri</p><p class="nickname">nickname</p></div>
-  <div class="content">Ya duerman a matequilla</div>
-  <div>
-    <div>Estado: Mantequilloso</div>
-    <div>Inserte corazon</div>
+<div class="post-container">
+  <!-- Encabezado -->
+  <div class="post-header">
+    <span class="user-name">{{name}}</span>
+    <span class="user-nickname">{{nickname}}</span>
+  </div>
+
+  <!-- Contenido central -->
+  <div class="post-content">
+    <p>
+      {{content}}
+    </p>
+  </div>
+
+  <!-- Pie -->
+  <div class="post-footer">
+    <span class="post-state">Estado: {{mood}}</span>
+    <span class="post-reaction">
+      ❤️
+    </span>
   </div>
 </div>
