@@ -1,0 +1,78 @@
+.post-container {
+
+  width: 50%;
+  height: 30%;
+  background-color: var(--content-color);
+  border-radius: 20px;
+  padding: 20px;
+  flex-direction: column;
+  /*justify-content: center;*/
+  border: 1px solid #5B476C80;
+
+  margin: 10px auto;
+  /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  /* Para manejar el contenido desbordado */
+  display: flex;
+}
+
+.post-header {
+  background-color: var(--content-color);
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  /* Separar nombre y nickname */
+  border-bottom: 1px solid #ddd;
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+
+}
+
+.user-name {
+  color: var(--font-color);
+}
+
+.user-nickname {
+  color: var(--font-color);
+}
+
+.post-content {
+  padding: 15px;
+  font-size: 14px;
+  color: var(--font-color);
+  flex: 1;
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  /* Ocupa el 60% del componente */
+}
+
+.post-footer {
+  padding: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  /* Distribuye estado y corazón */
+  align-items: center;
+  background-color: var(--content-color);
+  border-top: 1px solid #ddd;
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.post-state {
+  color: var(--font-color);
+}
+
+.post-reaction {
+  cursor: pointer;
+  color: red;
+
+  font-size: 20px;
+}
