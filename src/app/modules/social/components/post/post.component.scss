@@ -1,0 +1,27 @@
+.body{
+    width: 500px;
+    height: 250px;
+    background-color: var(--content-color);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #5B476C80;
+}
+
+
+.profile{
+  p{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .name{
+    font-size: 30px;
+  }
+  .nickname{
+    font-size: 18px;
+  }
+
+}
