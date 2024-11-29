@@ -1,8 +1,8 @@
 export interface Post {
     id: number,
-    date: Date,
+    date?: Date,
     name: string,
     nickname: string,
-    content: string,
+    postContent: string,
     mood: string
 }

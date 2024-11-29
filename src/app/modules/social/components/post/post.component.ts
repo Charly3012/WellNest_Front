@@ -10,31 +10,13 @@ import { SocialService } from '../../services/social.service';
 })
 export class PostComponent implements OnInit {
 
-  @Input() name: string = ' ';
-  @Input() nickname: string = ' ';
-  @Input() content: string = ' ';
-  @Input() mood: string = ' ';
+  @Input() data! : Post;
 
-  post: Post[] = [];
-
-
-
-  constructor(
-    private SocialService: SocialService
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.loadAllPost();
   }
 
-  loadAllPost(): void {
-    this.SocialService.getAllPost().subscribe(
-      (data) => {
-        this.post = data.content;
-        console.log(data)
-      }
-    )
-  }
 
 }
 
