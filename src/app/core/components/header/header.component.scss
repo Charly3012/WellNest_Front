@@ -32,6 +32,14 @@ nav {
     padding-left: 5%;
     padding-right: 5%;
 }
+.select-text-color {
+  color: var(--complementary-color);
+}
+
+.normal-text-color {
+  color: var(--font-color);
+}
+
 
 nav ul li {
 
@@ -44,7 +52,6 @@ nav ul li {
 
     a {
         text-decoration: none;
-        color: var(--font-color);
     }
 }
 
@@ -71,3 +78,4 @@ nav ul li:first-child::after {
     top: 50%;
     transform: translateY(-50%);
 }
+

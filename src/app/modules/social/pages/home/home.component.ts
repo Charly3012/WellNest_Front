@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../../services/home.service';
 import { environment } from 'src/environments/environment';
 import { Post } from '../../models/Post';
 import { SocialService } from '../../services/social.service';
