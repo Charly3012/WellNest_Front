@@ -1,10 +1,8 @@
-<div class="home-page">
-  <h1>{{ message }}</h1> <!-- Muestra el mensaje obtenido -->
+<div>
+  <button (click)="loadForYou()" >Para ti</button>
+  <button (click)="loadFollow()">Seguidos</button>
 </div>
 
-<h1>hola</h1>
-
-
-<state-post [name]="'Nuri'" [nickname]="'@NuriMiko'" [content]="'Vivan los tacos'" [mood]="'HELI'"> </state-post>
-<state-post [name]="'Nuri'" [nickname]="'@NuriMiko'" [content]="'Oprimieron a mantequilla'" [mood]="'Paz'">
-</state-post>
+<div class="posts">
+  <state-post *ngFor="let dataPost of posts" [data]="dataPost"></state-post>
+</div>

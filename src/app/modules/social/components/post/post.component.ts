@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Post } from '../../models/Post';
+import { SocialService } from '../../services/social.service';
+
 
 @Component({
   selector: 'state-post',
@@ -7,14 +10,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  @Input() name: string = ' ';
-  @Input() nickname: string = ' ';
-  @Input() content: string = ' ';
-  @Input() mood: string = ' ';
+  @Input() data! : Post;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
 }
+

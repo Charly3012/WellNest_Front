@@ -7,17 +7,14 @@ import { Post } from '../models/Post';
 @Injectable({
   providedIn: 'root'
 })
-export class HomeService {
+export class PostService {
+  apiUrl: String = environment.apiUrl;
 
-  public apiUrl: string = environment.apiUrl;
+  constructor(
+    private http: HttpClient
+  ) { }
 
-  constructor(private http: HttpClient) { }
-
-  getHolaMundo(): Observable<any> {
-    return this.http.get<any>(this.apiUrl + "/api/v1/demo/holaMundo");
-  }
   getAllPost(): Observable<Post[]> {
     return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetAllPost`);
   }
-
 }
