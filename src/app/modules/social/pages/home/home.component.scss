@@ -1,0 +1,38 @@
+.select-text-color {
+  color: var(--complementary-color);
+}
+
+.normal-text-color {
+  color: var(--font-color);
+}
+
+
+.btn-style {
+  padding: 5px 15px; /* Espaciado para que el texto no esté pegado */
+  font-size: 16px;
+  border: none; /* Borde del mismo color que el texto */
+  border-radius: 5px; /* Opcional, para redondear los bordes */
+  background-color: transparent; /* Sin fondo */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: color 0.3s ease, border-color 0.3s ease; /* Transiciones suaves */
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.btn-style:hover {
+  color: var(--complementary-color); /* Color del texto cambia al pasar el ratón */
+}
+
+.nav-post-space {
+  display: flex;          /* Habilita Flexbox */
+  justify-content: center; /* Centra los botones horizontalmente */
+  align-items: center;     /* Centra los botones verticalmente */
+  gap: 5px;               /* Opcional: agrega un espacio entre los botones */
+}
+
+
+* {
+  overflow: hidden;
+}

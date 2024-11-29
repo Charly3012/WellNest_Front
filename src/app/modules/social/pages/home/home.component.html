@@ -1,6 +1,6 @@
-<div>
-  <button (click)="loadForYou()" >Para ti</button>
-  <button (click)="loadFollow()">Seguidos</button>
+<div class="nav-post-space">
+  <button (click)="loadForYou()" class="btn-style" [ngClass]="{'select-text-color': postSpace, 'normal-text-color': !postSpace}">Para ti</button>
+  <button (click)="loadFollow()" class="btn-style" [ngClass]="{'select-text-color': !postSpace, 'normal-text-color': postSpace}">Seguidos</button>
 </div>
 
 <div class="posts">

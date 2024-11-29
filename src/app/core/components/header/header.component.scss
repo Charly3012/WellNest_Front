@@ -1,37 +1,86 @@
 header {
-    place-items: center;
-    background-color: var(--background-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid white;
+  place-items: center;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
 }
 
 span {
-    color: var(--complementary-color);
+  color: var(--complementary-color);
 }
 
 .head {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .logo {
-    font-family: "Lemon", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 48px;
-    color: var(--font-color);
+  font-family: "Lemon", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: var(--font-color);
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
 }
+.select-text-color {
+color: var(--complementary-color);
+}
+
+.normal-text-color {
+color: var(--font-color);
+}
+
+
+nav ul li {
+
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px 25px;
+  text-transform: capitalize;
+
+  position: relative;
+
+  a {
+      text-decoration: none;
+  }
+}
+
+.nav-apartado {
+  font-family: "Alexandria", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.nav-apartado li :hover {
+  color: var(--complementary-color);
+  transition: .4s;
+}
+
+nav ul li:first-child::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 70%;
+  background-color: white;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
 .select-text-color {
   color: var(--complementary-color);
 }
@@ -39,43 +88,3 @@ nav {
 .normal-text-color {
   color: var(--font-color);
 }
-
-
-nav ul li {
-
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 25px;
-    text-transform: capitalize;
-
-    position: relative;
-
-    a {
-        text-decoration: none;
-    }
-}
-
-.nav-apartado {
-    font-family: "Alexandria", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-size: 25px;
-}
-
-.nav-apartado li :hover {
-    color: var(--complementary-color);
-    transition: .4s;
-}
-
-nav ul li:first-child::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 70%;
-    background-color: white;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-

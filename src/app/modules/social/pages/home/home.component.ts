@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   public message : string = '';
   page!: Page;
   posts!: Post[];
+  postSpace : boolean = true;
 
 
   constructor(
@@ -25,16 +26,18 @@ export class HomeComponent implements OnInit {
   }
 
   loadFollow(){
+    this.postSpace = false;
+    this.page = {} as Page;
+    this.posts = [];
 
   }
 
   loadForYou(){
-    console.log('cargando para ti');
     this.socialService.getAllPost().subscribe(
       (data) => {
         this.page = data;
         this.posts = data.content;
-        console.log(this.posts);
+        this.postSpace = true;
       },
       (error) =>{
         console.log('Algo malio sal', error);
