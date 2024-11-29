@@ -11,7 +11,7 @@ import { Profile } from '../../modules/Profile';
 })
 export class ProfileComponent implements OnInit {
 
-  userName: string = ''; 
+  nickName: string = ''; 
 
   constructor(
     private socialService: SocialService,
@@ -25,7 +25,7 @@ export class ProfileComponent implements OnInit {
   loadNameProfile(): void {
     this.socialService.getUserProfile().subscribe({
       next: (profile: Profile) => {
-        this.userName = profile.name;
+        this.nickName = profile.nickname;
         
       },
       error: (error) => {

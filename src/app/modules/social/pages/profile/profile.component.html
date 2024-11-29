@@ -2,32 +2,25 @@
   <section class="seccion-perfil-usuario">
     <div class="perfil-usuario-header">
       <div class="perfil-usuario-portada">
+        <button type="button" class="boton-portada">
+          Cerrar Sesión
+        </button>
         <div class="perfil-usuario-avatar">
-          <img src="" alt="img-avatar">
-          <button type="button" class="boton-avatar">
-            <i class="far fa-image"></i>
-          </button>
+          <img src="" alt="">
         </div>
         <button type="button" class="boton-portada" (click)="navigateToProfileSettings()">
-          <i class="far fa-image"></i> Editar Perfil
+          Editar Perfil
         </button>
       </div>
     </div>
     <div class="perfil-usuario-body">
       <div class="perfil-usuario-bio">
-        <!-- Aquí va el usuario -->
-        <h3 class="titulo" *ngIf="userName; else loading">
-          {{ userName }}
+        <h3 class="titulo" *ngIf="nickName; else loading">
+          {{ nickName }}
         </h3>
         <ng-template #loading>
           <p>Cargando datos del usuario...</p>
         </ng-template>
-      </div>
-      <div class="publicar-estado">
-        <div class="publicar-header">
-          <img class="avatar-publicar" src="" alt="avatar">
-          <textarea class="input-estado" placeholder="¿Cómo te sientes hoy?" rows="1"></textarea>
-        </div>
       </div>
     </div>
   </section>
