@@ -8,30 +8,28 @@ import { PersonalService } from '../../services/personal.service';
   styleUrls: ['./goals.component.scss']
 })
 export class GoalsComponent implements OnInit {
-  goals: Note[] = [];
-  achievements: Note[] = [];
+  goals: Note[] = []; // Metas
+  achievements: Note[] = []; // Logros
 
-
-  constructor(private personalService:PersonalService) { }
+  constructor(private personalService: PersonalService) {}
 
   ngOnInit() {
     this.loadGoals();
-
   }
 
-  loadGoals(){
+  loadGoals() {
     this.personalService.loadGoals().subscribe(
       (response: Note[]) => {
-        this.goals =  response.filter(note => !note.state);
+        // Separa metas y logros
+        this.goals = response.filter(note => !note.state);
         this.achievements = response.filter(note => note.state);
-
-        
       },
-      (error) =>{
-        console.error('Error al obtener el mensaje ', error)
+      (error) => {
+        console.error('Error al obtener las metas:', error);
       }
     );
   }
+
   addGoal(content: string) {
     if (!content.trim()) {
       console.error('El contenido de la meta no puede estar vacío');
@@ -39,9 +37,8 @@ export class GoalsComponent implements OnInit {
     }
 
     this.personalService.addGoal(content).subscribe(
-      (response) => {
-        console.log('Meta añadida:', response);
-        this.loadGoals(); // Recarga las metas después de añadir con éxito
+      (response: Note) => {
+        this.goals.push(response); // Añade la nueva meta a la lista de metas
       },
       (error) => {
         console.error('Error al agregar la meta:', error);
@@ -49,7 +46,6 @@ export class GoalsComponent implements OnInit {
     );
   }
 
-  
   markAsDone(note: Note) {
     // Cambia el estado de la meta
     note.state = !note.state;
