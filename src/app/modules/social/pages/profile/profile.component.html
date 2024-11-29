@@ -14,15 +14,33 @@
       </div>
     </div>
     <div class="perfil-usuario-body">
+      <div class="seguidores-seguidos">
+        <span>Seguidos: 7</span>
+        <span>Seguidores: 40321 </span>
+      </div>
       <div class="perfil-usuario-bio">
         <h3 class="titulo" *ngIf="nickName; else loading">
           {{ nickName }}
         </h3>
+       
         <ng-template #loading>
           <p>Cargando datos del usuario...</p>
         </ng-template>
+        <div>
+          <button class="boton-seguir">Seguir</button>
+        </div>
+       
+
       </div>
+      
+
+        
+       
+        
+      
     </div>
+   
+
   </section>
 </body>
 

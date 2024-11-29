@@ -1,6 +1,7 @@
 *{
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
+    
 }
 
 body {
@@ -21,7 +22,7 @@ body {
     overflow: hidden;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: var(--content-color);
-    height: 30%;
+    height: 34%;
 }
 
 .seccion-perfil-usuario .perfil-usuario-header {
@@ -75,7 +76,7 @@ body {
 .seccion-perfil-usuario .perfil-usuario-body {
     background: var(--background-color);
     text-align: center;
-    padding: 3rem;
+    padding: 2.5rem;
     position: relative;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -93,9 +94,52 @@ body {
 }
 
 .perfil-usuario-bio{
-    
+    padding: 0px;
   font-weight: 500;
+    
 }
 
+.perfil-usuario-bio {
+    font-weight: 500;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+}
 
+.boton-seguir {
+    padding: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--content-color);
+    color: var(--font-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.boton-seguir:hover {
+    background-color: var(--font-color);
+    color: var(--content-color);
+}
+
+.seguidores-seguidos {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 14px;
+    text-align: right;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.seguidores-seguidos span {
+    font-weight: 400;
+}
+
+.titulo{
+    margin-bottom: 1px;
+}
