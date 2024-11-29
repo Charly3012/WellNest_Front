@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.registerData)
     .subscribe( response => {
       console.log(response);
-      this.router.navigate(['/auth/login'])
+  
     })
   }
 
@@ -43,6 +43,10 @@ export class RegisterComponent implements OnInit {
       return true;
     }
     return false;
+  }
+  
+  goToLogin() {
+    this.router.navigate(['/auth/login']);
   }
 
 }

@@ -20,7 +20,7 @@ body {
 
 #register-container {
   width: 500px;
-  height: 500px;
+  height: 550px;
   border-radius: 30px;
   background:var(--complementary-color-opacy);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -34,7 +34,7 @@ body {
   height: 43px;
   border-radius: 10px;
   color: white;
-  background-color: rgba(246, 114, 128, 1);
+  background-color: var(--button-colorRegister);
   border: none;
   cursor: pointer;
 }
@@ -107,4 +107,13 @@ h2{
   gap: 10px;
   margin-top: 20px;
   align-items: center;
+}
+#button-login {
+  width: 248px;
+  height: 43px;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--button-colorRegister);
+  border: none;
+  cursor: pointer;
 }

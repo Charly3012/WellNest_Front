@@ -21,7 +21,7 @@ const routes: Routes = [
         path: 'personal',
         loadChildren: () => import('./modules/personal/personal.module').then(m => m.PersonalModule)
       },
-      { path: '', redirectTo: '/personal/goals', pathMatch: 'full' },
+      
     ]
   },
   {
