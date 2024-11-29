@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from '../../models/Post';
-import { PostService } from '../../services/post.service';
+import { SocialService } from '../../services/social.service';
 
 
 @Component({
@@ -18,21 +18,20 @@ export class PostComponent implements OnInit {
   post: Post[] = [];
 
 
+
   constructor(
-    private PostService: PostService
+    private SocialService: SocialService
   ) { }
 
   ngOnInit(): void {
+    this.loadAllPost();
   }
 
   loadAllPost(): void {
-    this.PostService.getAllPost().subscribe(
+    this.SocialService.getAllPost().subscribe(
       (data) => {
-        this.post = data;
-        console.log('post', this.post)
-      },
-      (error) => {
-        console.log('Error en la peticion', error)
+        this.post = data.content;
+        console.log(data)
       }
     )
   }
