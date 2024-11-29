@@ -18,9 +18,9 @@ body {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color:rgba(246, 114,128, 0.3);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: none;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@ body {
 .perfil-edicion .titulo {
     margin-bottom: 20px;
     
-    color: var(--complementary-color);
+    color: var(--font-color);
     
     font-weight: 500;
 }
@@ -38,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
+ 
     font-weight: 400;
 }
 
@@ -52,7 +52,7 @@ body {
 .campo label {
     font-size: 1em;
     margin-bottom: 5px;
-    color: #666;
+    color: var(--font-color);
 }
 
 .campo input {
@@ -62,29 +62,22 @@ body {
     border-radius: 5px;
 }
 
-.campo input:focus {
-    border-color: #4A90E2;
-    outline: none;
-}
+
 
 /* Botón */
 .boton-aplicar {
-    background-color: gainsboro;
-    color: black;
+    background-color: var(--complementary-color);
+    color: var(--font-color);
     padding: 10px 15px;
-    
-    border: 1px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    //transition: background-color 0.3s ease;
     
     
     font-weight: 500;
 }
 
-.boton-aplicar:hover {
-    background-color: var(--complementary-color);
-}
 
 
 /* Estilo para campos de solo lectura */
