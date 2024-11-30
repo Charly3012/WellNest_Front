@@ -6,11 +6,14 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
 import { PostComponent } from './components/post/post.component';
+import { SearchComponent } from './pages/search/search.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
+    PostComponent,
+    SearchComponent,
     ProfileComponent,
     ProfileSettingsComponent,
     PostComponent
