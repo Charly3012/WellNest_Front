@@ -1,0 +1,58 @@
+.binnacleConteiner {
+    width: 70%;
+    height: 30%;
+    background-color: var(--content-color);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    border: 1px solid #5B476C80;
+
+    margin: 10px auto;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    /* Para manejar el contenido desbordado */
+    display: flex;
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.binncle-header {
+    background-color: var(--content-color);
+    padding: 0px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    /* Separar nombre y nickname */
+    border-bottom: 1px solid #ddd;
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+}
+
+.binnacle-content {
+    flex-grow: 1;
+    font-size: 14px;
+    /* Ocupa el espacio sobrante del contenedor */
+    padding: 10px 0;
+    overflow-y: auto;
+    /* Agrega scroll si el contenido es demasiado largo */
+}
+
+.binnacle-menu {
+    padding: 0px;
+    font-size: 16px;
+    display: flex;
+    justify-content: left;
+
+
+    img {
+        margin-left: 20px;
+    }
+}
