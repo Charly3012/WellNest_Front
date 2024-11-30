@@ -1,5 +1,8 @@
-<div class="home-page">
-  <h1>{{ message }}</h1> <!-- Muestra el mensaje obtenido -->
+<div class="nav-post-space">
+  <button (click)="loadForYou()" class="btn-style" [ngClass]="{'select-text-color': postSpace, 'normal-text-color': !postSpace}">Para ti</button>
+  <button (click)="loadFollow()" class="btn-style" [ngClass]="{'select-text-color': !postSpace, 'normal-text-color': postSpace}">Seguidos</button>
 </div>
 
-<h1>hola</h1>
+<div class="posts">
+  <state-post *ngFor="let data of posts" [data]="data"></state-post>
+</div>

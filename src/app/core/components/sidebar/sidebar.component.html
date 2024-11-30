@@ -1,11 +1,28 @@
 <aside class="sidebar">
   <nav class="sidebar-nav">
-    <ul>
-      <li><a  routerLink="social/home" routerLinkActive="active">Inicio</a></li>
-      <li><a href="/buscar" >Buscar</a></li>
-      <li><a  routerLink="social/profile" routerLinkActive="active">Perfil</a></li>
-      <li><a href="/estado" >Estado</a></li>
-      <li><a routerLink="personal/binnacle" routerLinkActive="active">Bitacora</a></li>
-    </ul>
+
+
+    <div class="SocialOptions" *ngIf="space; else elseBlock" >
+      <ul>
+        <li><a class="home" routerLink="social/home" routerLinkActive="active"><img
+          src="../../../../assets/icons/icon-inicio.png" width="21" height="21"><span>Inicio</span></a></li>
+    <li><a class="search" href="/buscar"><img src="../../../../assets/icons/icon-busqueda.png" width="21"
+          height="21">Buscar</a></li>
+    <li><a class="profile" href="social/profile"><img src="../../../../assets/icons/icon-perfil.png" width="23"
+          height="23">Perfil</a></li>
+    <li class="state"><a href="/estado"><img src="../../../../assets/icons/icon-estado.png" width="21"
+          height="21">Estado</a></li>
+      </ul>
+    </div>
+
+    <ng-template #elseBlock>
+      <div class="PersonalOptions">
+        <ul>
+          <li><a routerLink="personal/binnacle" routerLinkActive="active"><img
+                src="../../../../assets/icons/icon-bitacora.png" width="21" height="21">Bitácora</a></li>
+        </ul>
+      </div>
+    </ng-template>
+
   </nav>
 </aside>

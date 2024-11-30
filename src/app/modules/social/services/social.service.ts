@@ -1,8 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+import { Page } from '../models/Page';
 import { Profile } from '../modules/Profile';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +16,13 @@ export class SocialService {
 
   constructor(private http: HttpClient) { }
 
-  
+
   getUserProfile(): Observable<Profile> {
     return this.http.get<Profile>(`${this.apiUrl}/api/v1/user/getProfile`);
+  }
+
+  getAllPost(): Observable<Page> {
+    return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetAllPost`);
   }
 }
 
