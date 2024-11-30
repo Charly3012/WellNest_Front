@@ -1,23 +1,31 @@
-<div class="register-form">
-  <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
-    <label for="name">Nombre: </label>
-    <input type="text" id="name" name="name" [(ngModel)]="registerData.name" required />
 
-    <label for="nickname">Nombre de usuario: </label>
-    <input type="text" id="nickname" name="nickname" [(ngModel)]="registerData.nickname" required>
+<body >
+  <div class="register-form" id="register-container">
+    <h2>Crea tu cuenta</h2>
+    <div class="txtbx-group">
+    <form #registerForm="ngForm" (ngSubmit)="register(registerForm)">
+      
+      <input type="text" id="name" name="name" [(ngModel)]="registerData.name" required placeholder="Nombre"/>
+  
+      
+      <input type="text" id="nickname" name="nickname" [(ngModel)]="registerData.nickname" required placeholder="Nombre de usuario">
+  
+      
+      <input id="email" name="email" [(ngModel)]="registerData.email" required placeholder="Email"/>
+  
+      
+      <input type="date" name="bornDate" id="bornDate" [(ngModel)]="registerData.bornDate">
+  
+      
+      <input id="password" type="password" name="password" [(ngModel)]="registerData.password" required placeholder="Password"/>
+  
+      <input type="password" id="re-password" type="re-password" name="re-password" [(ngModel)]="rePassword" required placeholder="Confirmar contraseña"/>
+  
+      <button type="submit" id="button-register">Registrarse</button>
+    </form>
+    <button id="button-login" (click)="goToLogin()">Inicia sesión</button>
+  </div>
+  </div>
+  
+</body>
 
-    <label for="email">Email</label>
-    <input id="email" name="email" [(ngModel)]="registerData.email" required />
-
-    <label for="bornDate">Fecha de nacimiento: </label>
-    <input type="date" name="bornDate" id="bornDate" [(ngModel)]="registerData.bornDate">
-
-    <label for="password">Password</label>
-    <input id="password" type="password" name="password" [(ngModel)]="registerData.password" required />
-
-    <label for="re-password">Confirmar contraseña</label>
-    <input type="password" id="re-password" type="re-password" name="re-password" [(ngModel)]="rePassword" required />
-
-    <button type="submit">Registrarse</button>
-  </form>
-</div>

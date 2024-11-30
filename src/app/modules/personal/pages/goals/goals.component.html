@@ -1,0 +1,29 @@
+<div id="goal-container">
+  <h2>Metas</h2>
+  <ul>
+    <li *ngFor="let goal of goals">
+      <input
+        type="checkbox"
+        [checked]="goal.state"
+        (change)="markAsDone(goal)"
+      />
+      <span>{{ goal.content }}</span>
+    </li>
+  </ul>
+  <input type="text" #goalInput placeholder="Añadir meta" />
+  <button (click)="addGoal(goalInput.value); goalInput.value=''">+</button>
+</div>
+
+<div id="goal-container">
+  <h2>Logros</h2>
+  <ul>
+    <li *ngFor="let achievement of achievements">
+      <input
+        type="checkbox"
+        [checked]="achievement.state"
+        (change)="markAsDone(achievement)"
+      />
+      <span>{{ achievement.content }}</span>
+    </li>
+  </ul>
+</div>

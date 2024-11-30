@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterData } from '../../models/RegisterData';
 import { NgForm } from '@angular/forms';
-import { AuthServiceService } from '../../auth-service.service';
 import { Router } from '@angular/router';
+import { AuthServiceService } from '../../auth-service.service';
+import { RegisterData } from '../../models/RegisterData';
 
 @Component({
   selector: 'app-register',
@@ -34,7 +34,7 @@ export class RegisterComponent implements OnInit {
     this.authService.register(this.registerData)
     .subscribe( response => {
       console.log(response);
-      this.router.navigate(['/'])
+  
     })
   }
 
@@ -43,6 +43,10 @@ export class RegisterComponent implements OnInit {
       return true;
     }
     return false;
+  }
+  
+  goToLogin() {
+    this.router.navigate(['/auth/login']);
   }
 
 }
