@@ -25,28 +25,12 @@ app-sidebar {
   background-color: var(--background-color);
   overflow-y: auto;
   position: relative;
-
+  border-right: 1px solid white;
   /* Necesario para posicionar el pseudo-elemento */
   /* Permite scroll 
   en el Sidebar si hay más contenido */
 }
 
-
-
-.main::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  /* Inicia desde la parte superior */
-  left: 0;
-  /* Línea al extremo derecho */
-  width: 1px;
-  /* Grosor de la línea */
-  height: 100%;
-  /* Abarca toda la altura del sidebar */
-  background-color: var(--font-color);
-  /* Color de la línea */
-}
 
 
 /* Main Area */
@@ -78,25 +62,4 @@ app-footer {
 app-footer {
   background-color: #333;
   color: var(--font-color);
-}
-
-/* Responsividad para la línea vertical */
-@media (max-width: 768px) {
-  app-sidebar::after {
-    width: 1px;
-    /* Reduce el grosor en pantallas medianas */
-  }
-}
-
-@media (max-width: 480px) {
-  app-sidebar {
-    flex: 0.6;
-    /* Sidebar ocupa un 60% en pantallas pequeñas */
-    padding: 10px;
-  }
-
-  app-sidebar::after {
-    display: none;
-    /* Oculta la línea en pantallas muy pequeñas */
-  }
 }
