@@ -28,7 +28,7 @@ app-sidebar {
   border-right: 1px solid white;
 
   /* Necesario para posicionar el pseudo-elemento */
-  /* Permite scroll 
+  /* Permite scroll
   en el Sidebar si hay más contenido */
 }
 
@@ -62,3 +62,25 @@ app-footer {
   background-color: #333;
   color: var(--font-color);
 }
+
+/* Responsividad para la línea vertical */
+@media (max-width: 768px) {
+  app-sidebar::after {
+    width: 1px;
+    /* Reduce el grosor en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  app-sidebar {
+    flex: 0.6;
+    /* Sidebar ocupa un 60% en pantallas pequeñas */
+    padding: 10px;
+  }
+
+  app-sidebar::after {
+    display: none;
+    /* Oculta la línea en pantallas muy pequeñas */
+  }
+}
+
