@@ -3,12 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { SocialRoutingModule } from './social-routing.module';
 import { HomeComponent } from './pages/home/home.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
 import { PostComponent } from './components/post/post.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
+    ProfileComponent,
+    ProfileSettingsComponent,
     PostComponent
   ],
   imports: [
