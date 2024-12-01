@@ -14,6 +14,7 @@
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
     font-weight: 500;
+    flex-direction: row;
 
 }
 
@@ -33,7 +34,8 @@
 }
 
 .profile-foto {
-    margin: 10px;
+    margin: 10px 10px 10px 10%;
+
 }
 
 .button-Follow button {
@@ -45,8 +47,22 @@
 }
 
 .button-Follow {
-    margin: 2%;
+    align-items: center;
+    padding-left: 23%;
+}
 
-    margin-left: 30%;
+.boton-seguir {
+    margin-top: 25px;
+    padding: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--button-colorRegister);
+    color: var(--font-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
 
+.bobutton-Follow:hover {
+    background-color: var(--font-color);
+    color: var(--content-color);
 }
