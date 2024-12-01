@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from "./core/core.module";
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,9 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    CoreModule
-],
+    CoreModule,
+    FormsModule
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true

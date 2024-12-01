@@ -1,22 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --background-color: #6C5B7B;
-    --complementary-color: #F67280; //este color se emplea para resaltar el color seleccionado y en el que esta posicionado
-    --content-color: #5B476C; //este color se usa para los botones y el fondo de los contenidos como mensajes y la bitacora
-    --font-color: #ffffff; //color de las fuentes
-    --complementary-color-opacy:rgba(246, 114, 128, 0.3);
-    --button-colorRegister: rgba(246, 114, 128, 1);
+  --background-color: #6C5B7B;
+  --complementary-color: #F67280; //este color se emplea para resaltar el color seleccionado y en el que esta posicionado
+  --content-color: #5B476C; //este color se usa para los botones y el fondo de los contenidos como mensajes y la bitacora
+  --font-color: #ffffff; //color de las fuentes
+  --complementary-color-opacy: rgba(246, 114, 128, 0.3);
+  --button-colorRegister: rgba(246, 114, 128, 1);
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--background-color);
-    color: var(--font-color);
-}
-
-* {
-  overflow-y: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--font-color);
 }

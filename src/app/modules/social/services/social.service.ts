@@ -3,7 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
-import { Profile } from '../modules/Profile';
+import { Profile } from '../models/Profile';
+import { ModifyProfile } from '../models/ModifyProfile';
 
 
 
@@ -24,5 +25,13 @@ export class SocialService {
   getAllPost(): Observable<Page> {
     return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetAllPost`);
   }
+  getUserPost(): Observable<Page> {
+    return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetUserPost`);
+  }
+
+  updateProfile(modifyProfile: ModifyProfile): Observable<any> {
+    return this.http.put<ModifyProfile>(`${this.apiUrl}/api/v1/user/modifyProfile`, modifyProfile);
+  }
+
 }
 
