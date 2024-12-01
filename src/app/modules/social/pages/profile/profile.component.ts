@@ -4,7 +4,7 @@ import { SocialService } from '../../services/social.service';
 import { Profile } from '../../models/Profile';
 import { Page } from '../../models/Page';
 import { Post } from '../../models/Post';
-import { ModifyProfile } from '../../models/ModifyProfile';
+
 
 
 @Component({

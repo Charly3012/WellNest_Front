@@ -1,0 +1,52 @@
+.profile-Card {
+
+    width: 40%;
+    height: 30%;
+    margin: 10px auto;
+    padding: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Para manejar el contenido desbordado */
+    display: flex;
+    background-color: var(--content-color);
+    border-radius: 20px;
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+
+}
+
+.profile-Content {
+    margin: 2%;
+    align-items: column;
+    margin-left: 5%;
+
+    .name {
+        font-size: 20px;
+
+    }
+
+    span {
+        margin: 5px;
+    }
+}
+
+.profile-foto {
+    margin: 10px;
+}
+
+.button-Follow button {
+    background-color: var(--complementary-color);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: var(--font-size);
+}
+
+.button-Follow {
+    margin: 2%;
+
+    margin-left: 30%;
+
+}

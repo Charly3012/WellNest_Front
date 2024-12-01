@@ -3,6 +3,7 @@ import { SocialService } from '../../services/social.service';
 import { Profile } from '../../models/Profile';
 import { ModifyProfile } from '../../models/ModifyProfile';
 
+
 @Component({
   selector: 'app-profile-settings',
   templateUrl: './profile-settings.component.html',
