@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./state.component.scss']
 })
 export class StateComponent implements OnInit {
+  
 
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }

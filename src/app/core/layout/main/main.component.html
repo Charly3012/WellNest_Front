@@ -3,15 +3,20 @@
   <app-header></app-header>
 
   <div class="content-wrapper">
-
-
     <!-- Sidebar (Derecha) -->
-    <app-sidebar></app-sidebar>
+    <app-sidebar (onOpenStateModal)="toggleStateModal()"></app-sidebar>
 
     <div class="main">
       <!-- Main Area -->
       <app-content></app-content>
 
+      
+      <div *ngIf="isStateModalOpen" class="overlay" (click)="toggleStateModal()">
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          
+          <app-state></app-state>
+        </div>
+      </div>
     </div>
   </div>
 

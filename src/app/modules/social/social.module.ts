@@ -18,7 +18,7 @@ import { StateComponent } from './pages/state/state.component';
     ProfileComponent,
     ProfileSettingsComponent,
     PostComponent,
-    StateComponent
+    
   ],
   imports: [
     CommonModule,

@@ -9,6 +9,7 @@ import { MainComponent } from './layout/main/main.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
 import { FormsModule } from '@angular/forms';
 import { AuthModule } from '../modules/auth/auth.module';
+import { StateComponent } from '../modules/social/pages/state/state.component';
 
 
 
@@ -20,6 +21,7 @@ import { AuthModule } from '../modules/auth/auth.module';
     SidebarComponent,
     MainComponent,
     AuthLayoutComponent,
+    StateComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +34,8 @@ import { AuthModule } from '../modules/auth/auth.module';
     MainComponent,
     AuthLayoutComponent,
     AuthModule,
+    StateComponent
+    
   ]
 })
 export class CoreModule { }

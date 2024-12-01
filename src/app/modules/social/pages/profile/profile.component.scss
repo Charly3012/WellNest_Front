@@ -6,13 +6,16 @@
 
 
 .seccion-perfil-usuario {
-    width: 50%;
+    width: 50%;   
     margin-top: 0px;
-    border-radius:  20px;
+    border-radius:  30px;
     overflow: hidden;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: var(--content-color);
-    height: 34%;
+ 
+    text-align: center;
+    margin-left: 25%;
+    
 }
 
 .seccion-perfil-usuario .perfil-usuario-header {
@@ -31,7 +34,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.5 1rem;
-    margin: 5px;
+    margin: 8px;
 }
 .seccion-perfil-usuario .boton-portada {
     padding: 4px;
@@ -103,7 +106,7 @@
     padding: 5px;
     border: none;
     font-size: 14px;
-    background-color: var(--content-color);
+    background-color: var(--button-colorRegister);
     color: var(--font-color);
     cursor: pointer;
     border-radius: 5px;
