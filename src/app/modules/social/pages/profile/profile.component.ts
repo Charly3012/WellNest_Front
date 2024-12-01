@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SocialService } from '../../services/social.service';
 import { Profile } from '../../modules/Profile';
+import { SocialService } from '../../services/social.service';
 
 
 @Component({
@@ -37,4 +37,14 @@ export class ProfileComponent implements OnInit {
   navigateToProfileSettings() {
     this.router.navigate(['/social/profileSettings']);
   }
+  logout(): void {
+    console.log('Token antes de eliminar:', localStorage.getItem('token'));
+    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
+    console.log('Token después de eliminar:', localStorage.getItem('token'));
+    this.router.navigate(['/auth/login']);
+  }
+
+
+
 }
