@@ -1,12 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { SocialRoutingModule } from './social-routing.module';
-import { HomeComponent } from './pages/home/home.component';
-import { ProfileComponent } from './pages/profile/profile.component';
-import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
+import { FormsModule } from '@angular/forms';
 import { PostComponent } from './components/post/post.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 import { SearchComponent } from './pages/search/search.component';
+import { SocialRoutingModule } from './social-routing.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SearchComponent } from './pages/search/search.component';
   ],
   imports: [
     CommonModule,
-    SocialRoutingModule
+    SocialRoutingModule,
+    FormsModule
   ]
 })
 export class SocialModule { }
