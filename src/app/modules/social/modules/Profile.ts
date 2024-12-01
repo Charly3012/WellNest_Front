@@ -7,3 +7,6 @@ export interface Profile{
     bornDate: Date
 
 }
+export interface UserSearchResult {
+    nickname: string;
+}

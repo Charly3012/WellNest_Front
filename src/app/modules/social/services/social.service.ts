@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
-import { Profile } from '../modules/Profile';
+import { Profile, UserSearchResult } from '../modules/Profile';
 
 
 
@@ -24,8 +24,8 @@ export class SocialService {
   getAllPost(): Observable<Page> {
     return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetAllPost`);
   }
-  searchUsers(query: string): Observable<Profile[]> {
-    return this.http.get<Profile[]>(`${this.apiUrl}/api/v1/user/search?query=${query}`);
-}
+  searchUsers(query: string): Observable<UserSearchResult[]> {
+    return this.http.get<UserSearchResult[]>(`${this.apiUrl}/api/v1/user/search?query=${query}`);
+  }
 
 }

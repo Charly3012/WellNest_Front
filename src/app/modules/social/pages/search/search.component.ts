@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Profile } from '../../modules/Profile';
+import { debounceTime, Subject } from 'rxjs';
+import { UserSearchResult } from '../../modules/Profile';
 import { SocialService } from '../../services/social.service';
 
 @Component({
@@ -10,28 +11,37 @@ import { SocialService } from '../../services/social.service';
 })
 export class SearchComponent implements OnInit {
   searchQuery: string = '';  // Almacena la consulta de búsqueda
-  users: Profile[] = [];
+  users: UserSearchResult[] = [];
+  private searchSubject = new Subject<string>();
   
 
   constructor(    private socialService: SocialService,
     private router: Router) { }
 
   ngOnInit(): void {
+    this.searchSubject.pipe(debounceTime(300)).subscribe((query) => {
+      this.executeSearch(query);
+    });
   }
 
   searchUsers(): void {
-    if (this.searchQuery.length >= 3) {  // Solo busca si la consulta tiene al menos 3 caracteres
-      this.socialService.searchUsers(this.searchQuery).subscribe({
-        next: (result: Profile[]) => {
-          this.users = result;  // Almacenar los resultados en el arreglo `users`
-        },
-        error: (error) => {
-          console.error('Error al buscar usuarios:', error);
-        }
-      });
+    if (this.searchQuery.length >= 3) {
+      this.searchSubject.next(this.searchQuery);
     } else {
-      this.users = [];  // Limpiar los resultados si la búsqueda es menor de 3 caracteres
+      this.users = [];
     }
+  }
+
+  private executeSearch(query: string): void {
+    this.socialService.searchUsers(query).subscribe({
+      next: (result: UserSearchResult[]) => {
+        console.log('Usuarios encontrados:', result);
+        this.users = result;
+      },
+      error: (error) => {
+        console.error('Error al buscar usuarios:', error);
+      },
+    });
   }
 
 }
