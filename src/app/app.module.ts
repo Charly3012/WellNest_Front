@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from "./core/core.module";
 import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { SocialModule } from './modules/social/social.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,8 @@ import { SocialModule } from './modules/social/social.module';
     AppRoutingModule,
     CoreModule,
     SocialModule
+    
+    
 ],
   providers: [
     {

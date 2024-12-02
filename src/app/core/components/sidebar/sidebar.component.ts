@@ -8,7 +8,7 @@ import { SharedDataService } from '../../services/shared-data.service';
 })
 export class SidebarComponent implements OnInit {
   @Output() onOpenStateModal = new EventEmitter<void>(); 
-  //The default space is te social space (true)
+  
   space: boolean = true;
 
   constructor(
@@ -21,10 +21,7 @@ export class SidebarComponent implements OnInit {
     });
   }
 
-  openStateModal(): void {
-    this.onOpenStateModal.emit(); // Notificar que se debe abrir
-  }
-
+  
 
 
 

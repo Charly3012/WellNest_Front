@@ -7,9 +7,9 @@ import { ContentComponent } from './components/content/content.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MainComponent } from './layout/main/main.component';
 import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component';
-import { FormsModule } from '@angular/forms';
+
 import { AuthModule } from '../modules/auth/auth.module';
-import { StateComponent } from '../modules/social/pages/state/state.component';
+
 
 
 
@@ -21,7 +21,7 @@ import { StateComponent } from '../modules/social/pages/state/state.component';
     SidebarComponent,
     MainComponent,
     AuthLayoutComponent,
-    StateComponent
+    
   ],
   imports: [
     CommonModule,
@@ -34,7 +34,7 @@ import { StateComponent } from '../modules/social/pages/state/state.component';
     MainComponent,
     AuthLayoutComponent,
     AuthModule,
-    StateComponent
+    
     
   ]
 })

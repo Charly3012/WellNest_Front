@@ -12,8 +12,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    toggleStateModal(): void {
-    this.isStateModalOpen = !this.isStateModalOpen; // Alternar visibilidad
-  }
+    
+
+  
 
 }

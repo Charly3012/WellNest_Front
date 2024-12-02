@@ -7,7 +7,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
 import { PostComponent } from './components/post/post.component';
 import { SearchComponent } from './pages/search/search.component';
+import { FormsModule } from '@angular/forms';
 import { StateComponent } from './pages/state/state.component';
+
 
 
 @NgModule({
@@ -18,11 +20,16 @@ import { StateComponent } from './pages/state/state.component';
     ProfileComponent,
     ProfileSettingsComponent,
     PostComponent,
+    StateComponent
+    
+    
+    
     
   ],
   imports: [
     CommonModule,
-    SocialRoutingModule
+    SocialRoutingModule,
+    FormsModule
   ]
 })
 export class SocialModule { }
