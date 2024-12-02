@@ -15,3 +15,9 @@ export interface FollowProfile {
     name: string
     nickname: string
 }
+
+export interface ProfileSearch {
+    nickname: string
+    following: FollowProfile[]
+    followers: FollowProfile[]
+}

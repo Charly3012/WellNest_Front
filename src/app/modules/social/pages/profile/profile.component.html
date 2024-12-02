@@ -21,20 +21,14 @@
       <h3 class="titulo" *ngIf="profile.nickname; else loading">
         {{ profile.nickname }}
       </h3>
-
       <ng-template #loading>
         <p>Cargando datos del usuario...</p>
       </ng-template>
       <div>
         <button class="boton-seguir">Seguir</button>
       </div>
-
-
     </div>
-
   </div>
-
-
 </section>
 
 <div class="posts">

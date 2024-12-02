@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
-import { Profile } from '../models/Profile';
+import { FollowProfile, Profile } from '../models/Profile';
 import { ModifyProfile } from '../models/ModifyProfile';
 
 
@@ -34,5 +34,8 @@ export class SocialService {
     return this.http.put<ModifyProfile>(`${this.apiUrl}/api/v1/user/modifyProfile`, modifyProfile);
   }
 
+  addFollower(idNewFollow: number): Observable<any> {
+    return this.http.post<void>(`${this.apiUrl}/api/v1/user/follow/${idNewFollow}`, {})
+  }
 }
 

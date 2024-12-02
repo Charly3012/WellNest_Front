@@ -10,7 +10,7 @@ import { SocialService } from '../../services/social.service';
 })
 export class PostComponent implements OnInit {
 
-  @Input() data! : Post;
+  @Input() data!: Post;
 
   constructor() { }
 

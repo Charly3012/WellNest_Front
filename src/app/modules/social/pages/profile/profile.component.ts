@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { SocialService } from '../../services/social.service';
-import { Profile } from '../../models/Profile';
+import { FollowProfile, Profile } from '../../models/Profile';
 import { Page } from '../../models/Page';
 import { Post } from '../../models/Post';
 
@@ -20,6 +20,7 @@ export class ProfileComponent implements OnInit {
   posts!: Post[];
   postSpace: boolean = true;
   profile: Profile = {} as Profile;
+  followers!: FollowProfile;
 
 
   constructor(
@@ -63,7 +64,13 @@ export class ProfileComponent implements OnInit {
     );
   }
 
-
+  addFollowers(idNewFollow: number) {
+    this.socialService.addFollower(idNewFollow).subscribe(
+      (data) => {
+        this.followers = data.idUser;
+      }
+    )
+  }
 
 }
 
