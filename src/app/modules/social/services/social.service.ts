@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
@@ -45,4 +45,5 @@ export class SocialService {
     return this.http.post<void>(`${this.apiUrl}/api/v1/user/follow/${idNewFollow}`, {})
   }
 }
+
 
