@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialService } from '../../services/social.service';
+import { SearchProfiles } from '../../models/SearchProfiles.model';
 import { Router } from '@angular/router';
 import { debounceTime, Subject } from 'rxjs';
 import { UserSearchResult } from '../../modules/Profile';
-import { SocialService } from '../../services/social.service';
+
 
 @Component({
   selector: 'app-search',
@@ -13,39 +15,30 @@ export class SearchComponent implements OnInit {
   searchQuery: string = '';  // Almacena la consulta de búsqueda
   users: UserSearchResult[] = [];
   private searchSubject = new Subject<string>();
-  
+  searchedProfiles: SearchProfiles[] = [];
+  public queryToSearch: string = '';
 
-  constructor(    private socialService: SocialService,
-    private router: Router) { }
+  constructor(
+    private socialService: SocialService
+  ) { }
 
   ngOnInit(): void {
-    this.searchSubject.pipe(debounceTime(300)).subscribe((query) => {
-      this.executeSearch(query);
-    });
   }
 
-  searchUsers(): void {
-    if (this.searchQuery.length >= 3) {
-      this.searchSubject.next(this.searchQuery);
-    } else {
-      this.users = [];
-    }
+  // Esta función se ejecuta cada vez que el usuario escribe o borra
+  onInputChange(event: any) {
+    const query = event.target.value;
+    this.loadProfileSearch();
   }
 
-  private executeSearch(query: string): void {
-    this.socialService.searchUsers(query).subscribe({
-      next: (result: UserSearchResult[]) => {
-        console.log('Usuarios encontrados:', result);
-        this.users = result;
+  loadProfileSearch() {
+    this.socialService.searchByNickname(this.queryToSearch).subscribe(
+      (response) => {
+        this.searchedProfiles = response;
       },
-      error: (error) => {
-        console.error('Error al buscar usuarios:', error);
-      },
-    });
-  }
-
-
-  loadPrfileSearch() {
-
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
   }
 }

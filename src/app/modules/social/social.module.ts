@@ -11,6 +11,8 @@ import { SocialRoutingModule } from './social-routing.module';
 import { StateComponent } from './pages/state/state.component';
 
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { AppModule } from 'src/app/app.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({

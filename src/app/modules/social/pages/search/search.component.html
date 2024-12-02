@@ -1,10 +1,9 @@
 <div class="searchVista">
-  <form>
-    <input id="searchUsers" type="search" placeholder="Buscar">
-  </form>
-
+  <div>
+    <input id="searchUsers" type="search" placeholder="Buscar" [(ngModel)]="queryToSearch"
+      (input)="onInputChange($event)">
+  </div>
 </div>
-
-<div class="profile">
-  <app-profile-card></app-profile-card>
+<div class="profile" *ngIf="searchedProfiles">
+  <app-profile-card *ngFor="let data of searchedProfiles" [data]="data"></app-profile-card>
 </div>
