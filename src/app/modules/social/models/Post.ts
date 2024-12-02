@@ -1,8 +1,8 @@
 export interface Post {
-    id: number,
+    id?: number,
     date?: Date,
-    name: string,
-    nickname: string,
-    postContent: string,
-    mood: string
+    name?: string,
+    nickname?: string,
+    postContent?: string,
+    mood?: string
 }

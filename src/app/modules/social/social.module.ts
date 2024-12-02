@@ -8,6 +8,8 @@ import { ProfileSettingsComponent } from './pages/profile-settings/profile-setti
 import { PostComponent } from './components/post/post.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { StateComponent } from './pages/state/state.component';
+
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 
@@ -19,6 +21,7 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
     ProfileComponent,
     ProfileSettingsComponent,
     PostComponent,
+    StateComponent,
     ProfileCardComponent
   ],
   imports: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter  } from '@angular/core';
 import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
@@ -7,7 +7,8 @@ import { SharedDataService } from '../../services/shared-data.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  //The default space is te social space (true)
+  @Output() onOpenStateModal = new EventEmitter<void>(); 
+  
   space: boolean = true;
 
   constructor(
@@ -20,6 +21,7 @@ export class SidebarComponent implements OnInit {
     });
   }
 
+  
 
 
 
