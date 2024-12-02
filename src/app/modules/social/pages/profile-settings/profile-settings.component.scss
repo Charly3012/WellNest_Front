@@ -1,16 +1,6 @@
-*{
+* {
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
-}
-
-body {
-    margin: 0px;
-    padding: 40px;
-    
-    background-color: var(--background-color) ;
-    border: 1px solid white; 
-    box-sizing: border-box; 
-    
 }
 
 /* Contenedor principal */
@@ -18,8 +8,8 @@ body {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color:rgba(246, 114,128, 0.3);
-    border-radius: 10px;
+    background-color: rgba(246, 114, 128, 0.3);
+    border-radius: 30px;
     box-shadow: none;
     text-align: center;
 }
@@ -27,9 +17,7 @@ body {
 /* Título */
 .perfil-edicion .titulo {
     margin-bottom: 20px;
-    
     color: var(--font-color);
-    
     font-weight: 500;
 }
 
@@ -38,7 +26,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
- 
     font-weight: 400;
 }
 
@@ -59,10 +46,8 @@ body {
     padding: 10px;
     font-size: 1em;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
 }
-
-
 
 /* Botón */
 .boton-aplicar {
@@ -70,15 +55,11 @@ body {
     color: var(--font-color);
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     //transition: background-color 0.3s ease;
-    
-    
     font-weight: 500;
 }
-
-
 
 /* Estilo para campos de solo lectura */
 input[readonly] {

@@ -8,6 +8,9 @@ import { ProfileSettingsComponent } from './pages/profile-settings/profile-setti
 import { ProfileComponent } from './pages/profile/profile.component';
 import { SearchComponent } from './pages/search/search.component';
 import { SocialRoutingModule } from './social-routing.module';
+import { StateComponent } from './pages/state/state.component';
+
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { SocialRoutingModule } from './social-routing.module';
     SearchComponent,
     ProfileComponent,
     ProfileSettingsComponent,
-    PostComponent
+    PostComponent,
+    StateComponent,
+    ProfileCardComponent
   ],
   imports: [
     CommonModule,

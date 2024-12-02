@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
+import { StateComponent } from './pages/state/state.component';
 
 const routes: Routes = [
 
@@ -25,6 +26,11 @@ const routes: Routes = [
   {
     path: 'profileSettings',
     component: ProfileSettingsComponent
+  },
+
+  {
+    path: 'state',
+    component: StateComponent
   }
 
 ];

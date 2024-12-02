@@ -1,10 +1,10 @@
 <div class="searchVista">
-  <input class="searchUsers" type="text" [(ngModel)]="searchQuery" placeholder="Buscar usuarios..."
-    (keyup)="searchUsers()" />
-  <ul *ngIf="users">
-    <li *ngFor="let user of users">
-      <p>{{ user.nickname }}</p>
-    </li>
-  </ul>
-  <p *ngIf="users.length === 0">No se encontraron usuarios.</p>
+  <form>
+    <input id="searchUsers" type="search" placeholder="Buscar">
+  </form>
+
+</div>
+
+<div class="profile">
+  <app-profile-card></app-profile-card>
 </div>

@@ -3,7 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
-import { Profile, UserSearchResult } from '../modules/Profile';
+import { Post } from '../models/Post';
+import { FollowProfile, Profile } from '../models/Profile';
+import { ModifyProfile } from '../models/ModifyProfile';
+
 
 
 
@@ -24,8 +27,23 @@ export class SocialService {
   getAllPost(): Observable<Page> {
     return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetAllPost`);
   }
-  searchUsers(query: string): Observable<UserSearchResult[]> {
-    return this.http.get<UserSearchResult[]>(`${this.apiUrl}/api/v1/user/search?query=${query}`);
+
+  insertPost(post: Post): Observable<Post> {
+
+    return this.http.post<Post>(`${this.apiUrl}/api/v1/post/InsertPost`, post);
   }
 
+  getUserPost(): Observable<Page> {
+    return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetUserPost`);
+  }
+
+  updateProfile(modifyProfile: ModifyProfile): Observable<any> {
+    return this.http.put<ModifyProfile>(`${this.apiUrl}/api/v1/user/modifyProfile`, modifyProfile);
+  }
+
+  addFollower(idNewFollow: number): Observable<any> {
+    return this.http.post<void>(`${this.apiUrl}/api/v1/user/follow/${idNewFollow}`, {})
+  }
 }
+
+

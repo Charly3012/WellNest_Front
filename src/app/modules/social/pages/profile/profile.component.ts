@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Profile } from '../../modules/Profile';
 import { SocialService } from '../../services/social.service';
+import { FollowProfile, Profile } from '../../models/Profile';
+import { Page } from '../../models/Page';
+import { Post } from '../../models/Post';
+
 
 
 @Component({
@@ -11,7 +14,14 @@ import { SocialService } from '../../services/social.service';
 })
 export class ProfileComponent implements OnInit {
 
-  nickName: string = ''; 
+
+  public message: string = '';
+  page!: Page;
+  posts!: Post[];
+  postSpace: boolean = true;
+  profile: Profile = {} as Profile;
+  followers!: FollowProfile;
+
 
   constructor(
     private socialService: SocialService,
@@ -20,13 +30,15 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadNameProfile();
+    this.loadPostPersonal();
+
   }
 
   loadNameProfile(): void {
     this.socialService.getUserProfile().subscribe({
       next: (profile: Profile) => {
-        this.nickName = profile.nickname;
-        
+        this.profile = profile;
+
       },
       error: (error) => {
         console.error('Error al obtener el perfil del usuario:', error);
@@ -47,4 +59,28 @@ export class ProfileComponent implements OnInit {
 
 
 
+
+  loadPostPersonal() {
+    this.socialService.getUserPost().subscribe(
+      (data) => {
+        this.page = data;
+        this.posts = data.content;
+        this.postSpace = true;
+      },
+      (error) => {
+        console.log('Algo malio sal', error);
+      }
+    );
+  }
+
+  addFollowers(idNewFollow: number) {
+    this.socialService.addFollower(idNewFollow).subscribe(
+      (data) => {
+        this.followers = data.idUser;
+      }
+    )
+  }
+
 }
+
+
