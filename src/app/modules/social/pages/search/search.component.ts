@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialService } from '../../services/social.service';
+import { SearchProfiles } from '../../models/SearchProfiles.model';
 
 @Component({
   selector: 'app-search',
@@ -7,13 +9,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  searchedProfiles: SearchProfiles[] = [];
+  public queryToSearch: string = '';
+
+  constructor(
+    private socialService: SocialService
+  ) { }
 
   ngOnInit(): void {
   }
 
+  // Esta función se ejecuta cada vez que el usuario escribe o borra
+  onInputChange(event: any) {
+    const query = event.target.value;
+    this.loadProfileSearch();
+  }
 
-  loadPrfileSearch() {
-
+  loadProfileSearch() {
+    this.socialService.searchByNickname(this.queryToSearch).subscribe(
+      (response) => {
+        this.searchedProfiles = response;
+      },
+      (error) => {
+        console.log('Error:', error);
+      }
+    );
   }
 }

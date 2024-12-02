@@ -9,6 +9,8 @@ import { PostComponent } from './components/post/post.component';
 import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { AppModule } from 'src/app/app.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({

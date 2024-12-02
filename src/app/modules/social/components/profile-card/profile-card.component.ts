@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProfileSearch } from '../../models/Profile';
+import { SearchProfiles } from '../../models/SearchProfiles.model';
 
 @Component({
   selector: 'app-profile-card',
@@ -8,7 +8,8 @@ import { ProfileSearch } from '../../models/Profile';
 })
 export class ProfileCardComponent implements OnInit {
 
-  @Input() data!: ProfileSearch;
+  @Input() data: SearchProfiles = {} as SearchProfiles;
+
   constructor() { }
 
   ngOnInit(): void {

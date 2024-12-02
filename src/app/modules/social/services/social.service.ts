@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { Page } from '../models/Page';
 import { FollowProfile, Profile } from '../models/Profile';
 import { ModifyProfile } from '../models/ModifyProfile';
+import { SearchProfiles } from '../models/SearchProfiles.model';
 
 
 
@@ -36,6 +37,11 @@ export class SocialService {
 
   addFollower(idNewFollow: number): Observable<any> {
     return this.http.post<void>(`${this.apiUrl}/api/v1/user/follow/${idNewFollow}`, {})
+  }
+
+  searchByNickname(query: string): Observable<SearchProfiles[]>{
+    const url = `${this.apiUrl}/api/v1/user/searchUsersByNickname?query=${query}`;
+    return this.http.get<SearchProfiles[]>(url);
   }
 }
 
