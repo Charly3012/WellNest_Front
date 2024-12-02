@@ -1,15 +1,9 @@
 <div class="searchVista">
-
   <div>
-    <input id="searchUsers" type="search" placeholder="Buscar" [(ngModel)]="queryToSearch" (input)="onInputChange($event)">
+    <input id="searchUsers" type="search" placeholder="Buscar" [(ngModel)]="queryToSearch"
+      (input)="onInputChange($event)">
   </div>
-
-
-
-
 </div>
-
-
 <div class="profile" *ngIf="searchedProfiles">
-    <app-profile-card *ngFor="let data of searchedProfiles" [data]="data"></app-profile-card>
+  <app-profile-card *ngFor="let data of searchedProfiles" [data]="data"></app-profile-card>
 </div>

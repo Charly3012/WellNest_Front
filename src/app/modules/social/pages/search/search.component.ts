@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialService } from '../../services/social.service';
 import { SearchProfiles } from '../../models/SearchProfiles.model';
+import { Router } from '@angular/router';
+import { debounceTime, Subject } from 'rxjs';
+import { UserSearchResult } from '../../modules/Profile';
+
 
 @Component({
   selector: 'app-search',
@@ -8,7 +12,9 @@ import { SearchProfiles } from '../../models/SearchProfiles.model';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
-
+  searchQuery: string = '';  // Almacena la consulta de búsqueda
+  users: UserSearchResult[] = [];
+  private searchSubject = new Subject<string>();
   searchedProfiles: SearchProfiles[] = [];
   public queryToSearch: string = '';
 

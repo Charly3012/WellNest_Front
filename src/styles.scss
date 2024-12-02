@@ -16,3 +16,7 @@ body {
   background-color: var(--background-color);
   color: var(--font-color);
 }
+
+body {
+  overflow-y: hidden;
+}
