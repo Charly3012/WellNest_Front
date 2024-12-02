@@ -30,7 +30,7 @@ export class StateComponent implements OnInit {
 
     this.social.insertPost(newPost).subscribe({
       next: (response) => {
-       
+       alert('Post Publicado..')
         
       },
       error: (err) => {
