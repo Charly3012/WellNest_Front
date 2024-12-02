@@ -1,0 +1,68 @@
+.profile-Card {
+
+    width: 40%;
+    height: 30%;
+    margin: 10px auto;
+    padding: 20px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    /* Para manejar el contenido desbordado */
+    display: flex;
+    background-color: var(--content-color);
+    border-radius: 20px;
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    flex-direction: row;
+
+}
+
+.profile-Content {
+    margin: 2%;
+    align-items: column;
+    margin-left: 5%;
+
+    .name {
+        font-size: 20px;
+
+    }
+
+    span {
+        margin: 5px;
+    }
+}
+
+.profile-foto {
+    margin: 10px 10px 10px 10%;
+
+}
+
+.button-Follow button {
+    background-color: var(--complementary-color);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    color: var(--font-size);
+}
+
+.button-Follow {
+    align-items: center;
+    padding-left: 23%;
+}
+
+.boton-seguir {
+    margin-top: 25px;
+    padding: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: var(--button-colorRegister);
+    color: var(--font-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bobutton-Follow:hover {
+    background-color: var(--font-color);
+    color: var(--content-color);
+}

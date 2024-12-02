@@ -7,6 +7,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
 import { PostComponent } from './components/post/post.component';
 import { SearchComponent } from './pages/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { SearchComponent } from './pages/search/search.component';
     SearchComponent,
     ProfileComponent,
     ProfileSettingsComponent,
-    PostComponent
+    PostComponent,
+    ProfileCardComponent
   ],
   imports: [
     CommonModule,
-    SocialRoutingModule
+    SocialRoutingModule,
+    FormsModule
   ]
 })
 export class SocialModule { }
