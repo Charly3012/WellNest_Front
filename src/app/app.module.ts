@@ -10,17 +10,20 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     CoreModule,
-    SocialModule
-    
-    
-],
+    SocialModule,
+    FormsModule
+
+
+
+
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true

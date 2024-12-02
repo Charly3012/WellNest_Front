@@ -10,6 +10,7 @@ import { SearchComponent } from './pages/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { StateComponent } from './pages/state/state.component';
 
+import { ProfileCardComponent } from './components/profile-card/profile-card.component';
 
 
 @NgModule({
@@ -20,11 +21,8 @@ import { StateComponent } from './pages/state/state.component';
     ProfileComponent,
     ProfileSettingsComponent,
     PostComponent,
-    StateComponent
-    
-    
-    
-    
+    StateComponent,
+    ProfileCardComponent
   ],
   imports: [
     CommonModule,

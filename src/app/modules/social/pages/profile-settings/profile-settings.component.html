@@ -1,53 +1,33 @@
-
-    <section class="perfil-edicion">
-        <h1 class="titulo">Editar Perfil</h1>
-        <form action="#" method="post" class="formulario">
-            <div class="campo">
-                <label for="nombre-usuario">Nombre:</label>
-                <input 
-                    type="text" 
-                    id="nombre-usuario" 
-                    name="userName" 
-                    value="{{ userName }}" 
-                    readonly>
-            </div>
-            <div class="campo">
-                <label for="correo-electronico">Correo Electrónico:</label>
-                <input 
-                    type="text" 
-                    id="correo-electronico" 
-                    name="email" 
-                    value="{{ email }}" 
-                    readonly>
-            </div>
-            <div class="campo">
-                <label for="nombre-apodo">Nombre de Usuario:</label>
-                <input 
-                    type="text" 
-                    id="nombre-apodo" 
-                    name="nickName" 
-                    value="{{ nickName }}" 
-                    readonly>
-            </div>
-            <div class="campo">
-                <label for="nueva-contrasena">Nueva Contraseña:</label>
-                <input 
-                    type="password" 
-                    id="nueva-contrasena" 
-                    name="newPassword" 
-                    placeholder="Introduce tu nueva contraseña" 
-                    required>
-            </div>
-            <div class="campo">
-                <label for="confirmar-contrasena">Confirmar Contraseña:</label>
-                <input 
-                    type="password" 
-                    id="confirmar-contrasena" 
-                    name="confirmPassword" 
-                    placeholder="Repite tu nueva contraseña" 
-                    required>
-            </div>
-            <button type="submit" class="boton-aplicar">Aplicar Cambios</button>
-        </form>
-    </section>
-
+<section class="perfil-edicion">
+    <h1 class="titulo">Editar Perfil</h1>
+    <form action="#" method="post" (ngSubmit)="modifyProfile()" class="formulario">
+        <div class="campo">
+            <label for="nombre-usuario">Nombre:</label>
+            <input type="text" id="nombre-usuario" name="userName" [(ngModel)]="profileData.name">
+        </div>
+        <div class="campo">
+            <label for="correo-electronico">Correo Electrónico:</label>
+            <input type="text" id="correo-electronico" name="email" [(ngModel)]="email" readonly>
+        </div>
+        <div class="campo">
+            <label for="nombre-apodo">Nombre de Usuario:</label>
+            <input type="text" id="nombre-apodo" name="nickName" [(ngModel)]="profileData.nickname">
+        </div>
+        <div class="campo">
+            <label for="antigua-contrasena">Antigua Contraseña</label>
+            <input type="password" id="antigua-contrasena" name="oldPassword"
+                placeholder="Introduce tu contraseña Anterior" [(ngModel)]="profileData.password" required>
+        </div>
+        <div class="campo">
+            <label for="nueva-contrasena">Nueva Contraseña:</label>
+            <input type="password" id="nueva-contrasena" name="newPassword" placeholder="Introduce tu nueva contraseña"
+                [(ngModel)]="profileData.newPassword" required>
+        </div>
+        <div class="campo">
+            <label for="confirmar-contrasena">Confirmar Contraseña:</label>
+            <input type="password" id="confirmar-contrasena" name="confirmPassword"
+                placeholder="Repite tu nueva contraseña" required>
+        </div>
+        <button type="submit" class="boton-aplicar">Aplicar Cambios</button>
+    </form>
+</section>

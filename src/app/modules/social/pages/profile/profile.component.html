@@ -1,54 +1,36 @@
-
-  <section class="seccion-perfil-usuario">
-    <div class="perfil-usuario-header">
-      <div class="perfil-usuario-portada">
-        <button type="button" class="boton-portada">
-          Cerrar Sesión
-        </button>
-        <div class="perfil-usuario-avatar">
-          <img src="" alt="">
-        </div>
-        <button type="button" class="boton-portada" (click)="navigateToProfileSettings()">
-          Editar Perfil
-        </button>
+<section class="seccion-perfil-usuario">
+  <div class="perfil-usuario-header">
+    <div class="perfil-usuario-portada">
+      <button type="button" class="boton-portada">
+        Cerrar Sesión
+      </button>
+      <div class="perfil-usuario-avatar">
+        <img src="" alt="">
+      </div>
+      <button type="button" class="boton-portada" (click)="navigateToProfileSettings()">
+        Editar Perfil
+      </button>
+    </div>
+  </div>
+  <div class="perfil-usuario-body">
+    <div class="seguidores-seguidos">
+      <span>Seguidos: {{profile.following.length}} </span>
+      <span>Seguidores: {{profile.followers.length}} </span>
+    </div>
+    <div class="perfil-usuario-bio">
+      <h3 class="titulo" *ngIf="profile.nickname; else loading">
+        {{ profile.nickname }}
+      </h3>
+      <ng-template #loading>
+        <p>Cargando datos del usuario...</p>
+      </ng-template>
+      <div>
+        <button class="boton-seguir">Seguir</button>
       </div>
     </div>
-    <div class="perfil-usuario-body">
-      <div class="seguidores-seguidos">
-        <span>Seguidos: 7</span>
-        <span>Seguidores: 40321 </span>
-      </div>
-      <div class="perfil-usuario-bio">
-        <h3 class="titulo" *ngIf="nickName; else loading">
-          {{ nickName }}
-        </h3>
-       
-        <ng-template #loading>
-          <p>Cargando datos del usuario...</p>
-        </ng-template>
-        <div>
-          <button class="boton-seguir">Seguir</button>
-        </div>
-       
+  </div>
+</section>
 
-      </div>
-      
-
-        
-       
-        
-      
-    </div>
-   
-
-  </section>
-
-
-    
-
-
-
-
-
-
-
+<div class="posts">
+  <state-post *ngFor="let data of posts" [data]="data"></state-post>
+</div>

@@ -1,4 +1,4 @@
-*{
+* {
     font-family: "Alexandria", sans-serif;
     font-optical-sizing: auto;
 }
@@ -6,16 +6,15 @@
 
 
 .seccion-perfil-usuario {
-    width: 50%;   
+    width: 50%;
     margin-top: 0px;
-    border-radius:  30px;
+    border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     background-color: var(--content-color);
- 
     text-align: center;
     margin-left: 25%;
-    
+
 }
 
 .seccion-perfil-usuario .perfil-usuario-header {
@@ -36,13 +35,14 @@
     padding: 0.5 1rem;
     margin: 8px;
 }
+
 .seccion-perfil-usuario .boton-portada {
     padding: 4px;
     border: solid 1px;
     border-radius: 5px;
     font-size: 400;
     cursor: pointer;
-    background-color: transparent ;
+    background-color: transparent;
     color: var(--font-color);
     margin-bottom: 65px;
 }
@@ -54,7 +54,6 @@
     position: absolute;
     bottom: -60px;
     left: calc(50% - 60px);
-
     background-color: var(--font-color);
     border-radius: 50%;
     z-index: 2;
@@ -86,9 +85,9 @@
     z-index: 1;
 }
 
-.perfil-usuario-bio{
+.perfil-usuario-bio {
     padding: 0px;
-  font-weight: 500;
+    font-weight: 500;
 
 }
 
@@ -133,6 +132,6 @@
     font-weight: 400;
 }
 
-.titulo{
+.titulo {
     margin-bottom: 1px;
 }
