@@ -20,7 +20,8 @@ export class ProfileComponent implements OnInit {
   posts!: Post[];
   postSpace: boolean = true;
   profile: Profile = {} as Profile;
-  followers!: FollowProfile;
+  //followers!: FollowProfile;
+  //following!: FollowProfile;
 
 
   constructor(
@@ -73,13 +74,13 @@ export class ProfileComponent implements OnInit {
     );
   }
 
-  addFollowers(idNewFollow: number) {
+  /*addFollowers(idNewFollow: number) {
     this.socialService.addFollower(idNewFollow).subscribe(
       (data) => {
         this.followers = data.idUser;
       }
     )
-  }
+  }*/
 
 }
 
