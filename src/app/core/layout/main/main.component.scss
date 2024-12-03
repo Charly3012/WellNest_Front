@@ -42,6 +42,7 @@ app-sidebar {
   overflow-y: auto;
   /* Permite hacer scroll si es necesario */
   margin-left: 10px;
+  margin-bottom: 5%;
   /* Espacio entre Main y Sidebar */
   position: relative;
 }
@@ -83,6 +84,3 @@ app-footer {
     /* Oculta la línea en pantallas muy pequeñas */
   }
 }
-
-
-
