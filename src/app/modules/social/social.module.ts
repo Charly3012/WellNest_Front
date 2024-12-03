@@ -1,15 +1,27 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { SocialRoutingModule } from './social-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
 import { PostComponent } from './components/post/post.component';
 import { SearchComponent } from './pages/search/search.component';
+=======
+import { NgModule } from '@angular/core';
+
+>>>>>>> origin/main
 import { FormsModule } from '@angular/forms';
+import { PostComponent } from './components/post/post.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { SearchComponent } from './pages/search/search.component';
+import { SocialRoutingModule } from './social-routing.module';
 import { StateComponent } from './pages/state/state.component';
 
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { AppModule } from 'src/app/app.module';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({

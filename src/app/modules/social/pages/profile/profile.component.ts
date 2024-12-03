@@ -50,6 +50,15 @@ export class ProfileComponent implements OnInit {
   navigateToProfileSettings() {
     this.router.navigate(['/social/profileSettings']);
   }
+  logout(): void {
+    console.log('Token antes de eliminar:', localStorage.getItem('token'));
+    localStorage.removeItem('token');
+    sessionStorage.removeItem('token');
+    console.log('Token después de eliminar:', localStorage.getItem('token'));
+    this.router.navigate(['/auth/login']);
+  }
+
+
 
 
   loadPostPersonal() {
