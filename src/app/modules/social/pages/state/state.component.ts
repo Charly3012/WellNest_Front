@@ -12,15 +12,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./state.component.scss']
 })
 export class StateComponent implements OnInit {
- 
-  postContent: string= ''
-  mood:  string= ''
+
+  postContent: string = ''
+  mood: string = ''
   isModalVisible = false;
 
   constructor(
     private router: Router,
     private sharedDataService: SharedDataService,
-    private social:SocialService) { }
+    private social: SocialService) { }
 
   ngOnInit(): void {
     this.sharedDataService.modalState$.subscribe((state) => {
@@ -33,28 +33,26 @@ export class StateComponent implements OnInit {
     const newPost: Post = {
       postContent: this.postContent,
       mood: this.mood
-     
+
     };
     this.clearForm();
 
     this.social.insertPost(newPost).subscribe({
       next: (response) => {
-      
-       alert('Post Publicado..')
-       
-        
+
+        alert('Post Publicado..')
+
       },
       error: (err) => {
         console.error('Error al crear el post:', err);
-       
       },
     });
   }
 
-    
+
 
   closeModal() {
-    this.sharedDataService.setModalState(false); 
+    this.sharedDataService.setModalState(false);
     this.router.navigate(['/social/home']);
   }
 
@@ -63,6 +61,5 @@ export class StateComponent implements OnInit {
     this.postContent = '';
     this.mood = '';
   }
- 
 
 }

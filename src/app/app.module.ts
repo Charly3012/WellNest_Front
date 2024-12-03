@@ -8,9 +8,11 @@ import { AuthInterceptor } from './core/interceptors/auth.interceptor';
 import { SocialModule } from './modules/social/social.module';
 import { FormsModule } from '@angular/forms';
 
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -20,8 +22,8 @@ import { FormsModule } from '@angular/forms';
     SocialModule,
     FormsModule
 
-    
-],
+
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true
