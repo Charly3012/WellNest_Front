@@ -21,7 +21,7 @@ import { AuthModule } from '../modules/auth/auth.module';
     SidebarComponent,
     MainComponent,
     AuthLayoutComponent,
-    
+      
   ],
   imports: [
     CommonModule,

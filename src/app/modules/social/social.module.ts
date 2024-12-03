@@ -1,6 +1,15 @@
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
+import { SocialRoutingModule } from './social-routing.module';
+import { HomeComponent } from './pages/home/home.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { ProfileSettingsComponent } from './pages/profile-settings/profile-settings.component';
+import { PostComponent } from './components/post/post.component';
+import { SearchComponent } from './pages/search/search.component';
+=======
 import { NgModule } from '@angular/core';
 
+>>>>>>> origin/main
 import { FormsModule } from '@angular/forms';
 import { PostComponent } from './components/post/post.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -30,6 +39,7 @@ import { CoreModule } from 'src/app/core/core.module';
     CommonModule,
     SocialRoutingModule,
     FormsModule
+    
   ]
 })
 export class SocialModule { }

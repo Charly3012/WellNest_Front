@@ -14,8 +14,8 @@
   </div>
   <div class="perfil-usuario-body">
     <div class="seguidores-seguidos">
-      <span>Seguidos: {{profile.following.length}} </span>
-      <span>Seguidores: {{profile.followers.length}} </span>
+      <span *ngIf="profile.following">Seguidos: {{profile.following.length}} </span>
+      <span *ngIf="profile.followers">Seguidores: {{profile.following.length}} </span>
     </div>
     <div class="perfil-usuario-bio">
       <h3 class="titulo" *ngIf="profile.nickname; else loading">
