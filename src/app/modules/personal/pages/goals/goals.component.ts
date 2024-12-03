@@ -38,7 +38,8 @@ export class GoalsComponent implements OnInit {
 
     this.personalService.addGoal(content).subscribe(
       (response: Note) => {
-        this.goals.push(response); // Añade la nueva meta a la lista de metas
+        //this.goals.push(response); // Añade la nueva meta a la lista de metas
+        this.loadGoals();
       },
       (error) => {
         console.error('Error al agregar la meta:', error);
