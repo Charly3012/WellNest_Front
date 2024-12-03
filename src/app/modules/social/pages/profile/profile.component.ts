@@ -20,8 +20,8 @@ export class ProfileComponent implements OnInit {
   posts!: Post[];
   postSpace: boolean = true;
   profile: Profile = {} as Profile;
-  //followers!: FollowProfile;
-  //following!: FollowProfile;
+  followers!: FollowProfile;
+  following!: FollowProfile;
 
 
   constructor(
