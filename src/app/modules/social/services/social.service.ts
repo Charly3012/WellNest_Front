@@ -32,7 +32,6 @@ export class SocialService {
   }
 
   insertPost(post: Post): Observable<Post> {
-
     return this.http.post<Post>(`${this.apiUrl}/api/v1/post/InsertPost`, post);
   }
 

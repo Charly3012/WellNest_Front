@@ -1,0 +1,23 @@
+<div class="binnacleConteiner">
+
+    <!-- Contenido central -->
+    <div class="binnacle-content">
+        <p>
+            {{dataBinnacle.content}}
+        </p>
+    </div>
+    <div class="fecha">
+        <p>
+            {{dataBinnacle.date}}
+        </p>
+    </div>
+
+    <!-- Pie -->
+    <div class="binnacle-menu">
+        <a><img class="expantion" src="../../../../../assets/icons/icon-expandir.png"></a>
+        <a><img class="modify" src="../../../../../assets/icons/icon-editar.png"></a>
+        <a (click)="deleteBinnacle(dataBinnacle.idBinnacle)"><img class="delte"
+                src="../../../../../assets/icons/icon-eliminar.png"></a>
+    </div>
+
+</div>

@@ -1,23 +1,30 @@
+<div *ngIf="isModalVisible" class="overlay" (click)="closeModal()">
+    <div class="modal" (click)="$event.stopPropagation()">
+        <div class="post-container">
+            <!-- Encabezado -->
+            <div class="post-header">
+                <input [(ngModel)]="content" name="content" id="contentPost" type="text"
+                    placeholder="¿Quieres compartir algo?">
+            </div>
+
+            <!-- Pie -->
+            <div class="post-footer">
+                <button (click)="submitBinnacle()">Enviar</button>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
 <div class="binnacleConteiner">
-    <div class="binncle-header">
-        <span class="user-name">
-            <p>Dia a dia</p>
-        </span>
-    </div>
 
-    <!-- Contenido central -->
-    <div class="binnacle-content">
-        <p>
-            Querido diario la escuela me esta matando, creo que me va llevar la chingada este semestre :c
-            pero x somos chavos, solo espero no reprobar o lloro TnT
-            fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-        </p>
+    <div class="add">
+        <button class="button.add" (click)="openModal()">
+            Añadir
+        </button>
     </div>
-
-    <!-- Pie -->
-    <div class="binnacle-menu">
-        <a><img class="expantion" src="../../../../../assets/icons/icon-expandir.png"></a>
-        <a><img class="modify" src="../../../../../assets/icons/icon-editar.png"></a>
-        <a><img class="delte" src="../../../../../assets/icons/icon-eliminar.png"></a>
+    <div>
+        <app-binnacle-post *ngFor="let dataBinnacle of binnacle " [dataBinnacle]="dataBinnacle"> </app-binnacle-post>
     </div>
 </div>

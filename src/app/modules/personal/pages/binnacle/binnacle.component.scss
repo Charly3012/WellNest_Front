@@ -1,58 +1,201 @@
-.binnacleConteiner {
-    width: 70%;
-    height: 30%;
-    background-color: var(--content-color);
-    border-radius: 20px;
-    padding: 20px;
+.add {
     display: flex;
-    flex-direction: column;
-    /*justify-content: center;*/
-    border: 1px solid #5B476C80;
+    margin: 2%;
 
-    margin: 10px auto;
+    /* Espacio entre el botón y el contenido debajo */
+}
+
+.add button {
+    font-family: "Alexandria", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--font-color);
+    background-color: var(--button-colorRegister);
+    border: none;
+    border-radius: 8px;
+    /* Bordes más suaves */
+    padding: 10px 20px;
+    /* Espaciado interno para un tamaño más equilibrado */
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra para un efecto flotante */
+    transition: .3s;
+    /* Transición suave para los efectos */
+}
+
+.add button:hover {
+    background-color: var(--font-color);
+    color: var(--content-color);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.add button:active {
+
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+.post-container {
+    width: 80%;
+    height: 35%;
+    background-color: var(--content-color);
+    border-radius: 30px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #5B476C80;
+    margin: 10px;
+
+
     /* Bordes redondeados */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 
     /* Para manejar el contenido desbordado */
     display: flex;
-    font-family: "Alexandria", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
 }
 
-.binncle-header {
-    background-color: var(--content-color);
-    padding: 0px;
-    font-size: 20px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    /* Separar nombre y nickname */
-    border-bottom: 1px solid #ddd;
-    font-family: "Alexandria", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-
-}
-
-.binnacle-content {
-    flex-grow: 1;
-    font-size: 14px;
-    /* Ocupa el espacio sobrante del contenedor */
-    padding: 10px 0;
-    overflow-y: auto;
-    /* Agrega scroll si el contenido es demasiado largo */
-}
-
-.binnacle-menu {
-    padding: 0px;
+.post-header {
+    padding: 10px;
     font-size: 16px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--content-color);
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+}
 
 
-    img {
-        margin-left: 20px;
+
+.post-content {
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    /* Distribuye estado y corazón */
+    align-items: center;
+    background-color: var(--content-color);
+
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+}
+
+.post-footer {
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+
+    justify-content: space-between;
+    /* Distribuye estado y corazón */
+    align-items: center;
+    background-color: var(--content-color);
+
+    font-family: "Alexandria", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+
+}
+
+.post-footer button {
+    width: 20%;
+    padding: 10px;
+    margin: 15px auto;
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--complementary-color);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+input::placeholder {
+    font-size: 17px;
+    color: var(--font-color);
+}
+
+input {
+    color: var(--font-color);
+}
+
+.post-content input {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--content-color);
+}
+
+.post-header input {
+    width: 100%;
+    height: 30%;
+    padding: 30px;
+    margin-bottom: 10px auto;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--content-color);
+}
+
+.post-content legend {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.post-footer button:hover {
+    transition: 0.2s;
+    background-color: var(--font-color);
+    color: var(--content-color);
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    padding: 20px;
+    border-radius: 10px;
+    animation: fadeIn 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

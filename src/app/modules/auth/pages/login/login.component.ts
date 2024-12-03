@@ -12,8 +12,8 @@ import { Credentials } from '../../models/Credentials';
 export class LoginComponent implements OnInit {
 
   creds: Credentials = {
-    email : '',
-    password : ''
+    email: '',
+    password: ''
   };
 
   constructor(
@@ -25,18 +25,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(form: NgForm){
+  login(form: NgForm) {
     console.log('form values', form.value)
     this.authService.login(this.creds)
-    .subscribe( response => {
-      console.log(response);
-      this.router.navigate(['/'])
-    })
+      .subscribe(response => {
+        console.log(response);
+        this.router.navigate(['/social/home'])
+      })
   }
   navigateToRegister() {
     this.router.navigate(['/auth/register']);
   }
-  
+
 
 }
 
