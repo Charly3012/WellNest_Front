@@ -6,6 +6,9 @@ import { Page } from '../models/Page';
 import { Post } from '../models/Post';
 import { FollowProfile, Profile } from '../models/Profile';
 import { ModifyProfile } from '../models/ModifyProfile';
+import { StateComponent } from '../pages/state/state.component';
+import { state } from '@angular/animations';
+import { SocialModule } from '../social.module';
 
 
 
@@ -17,7 +20,9 @@ export class SocialService {
 
   private apiUrl: string = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    
+    private http: HttpClient) { }
 
 
   getUserProfile(): Observable<Profile> {
@@ -34,7 +39,7 @@ export class SocialService {
   }
 
   getUserPost(): Observable<Page> {
-    return this.http.get<any>(`${this.apiUrl}/api/v1/post/GetUserPost`);
+    return this.http.get<Page>(`${this.apiUrl}/api/v1/post/GetUserPost`);
   }
 
   updateProfile(modifyProfile: ModifyProfile): Observable<any> {
@@ -44,5 +49,7 @@ export class SocialService {
   addFollower(idNewFollow: number): Observable<any> {
     return this.http.post<void>(`${this.apiUrl}/api/v1/user/follow/${idNewFollow}`, {})
   }
+
+  
 }
 

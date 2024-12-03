@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SocialRoutingModule } from './social-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -28,6 +27,7 @@ import { ProfileCardComponent } from './components/profile-card/profile-card.com
     CommonModule,
     SocialRoutingModule,
     FormsModule
+    
   ]
 })
 export class SocialModule { }

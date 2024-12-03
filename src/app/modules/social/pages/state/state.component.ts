@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialService } from '../../services/social.service';
 import { Post } from '../../models/Post';
+import { SharedDataService } from 'src/app/core/services/shared-data.service';
+import { Router } from '@angular/router';
 
 
 
@@ -13,11 +15,17 @@ export class StateComponent implements OnInit {
  
   postContent: string= ''
   mood:  string= ''
- 
+  isModalVisible = false;
 
-  constructor(private social:SocialService) { }
+  constructor(
+    private router: Router,
+    private sharedDataService: SharedDataService,
+    private social:SocialService) { }
 
   ngOnInit(): void {
+    this.sharedDataService.modalState$.subscribe((state) => {
+      this.isModalVisible = state;
+    });
   }
 
 
@@ -27,10 +35,13 @@ export class StateComponent implements OnInit {
       mood: this.mood
      
     };
+    this.clearForm();
 
     this.social.insertPost(newPost).subscribe({
       next: (response) => {
+      
        alert('Post Publicado..')
+       
         
       },
       error: (err) => {
@@ -40,10 +51,18 @@ export class StateComponent implements OnInit {
     });
   }
 
+    
 
-  ejemlo(){
-    console.log('hola ')
-    console.log(this.postContent,this.mood)
+  closeModal() {
+    this.sharedDataService.setModalState(false); 
+    this.router.navigate(['/social/home']);
   }
+
+
+  clearForm() {
+    this.postContent = '';
+    this.mood = '';
+  }
+ 
 
 }

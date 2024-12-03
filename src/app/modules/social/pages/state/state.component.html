@@ -1,18 +1,22 @@
-<div class="post-container">
-    <!-- Encabezado -->
-    <div class="post-header">
-      <input [(ngModel)]="postContent" name="content" id="contentPost" type="text" placeholder="¿Quieres compartir algo?">
-    </div>
-  
-    <!-- Contenido central -->
-    <div class="post-content">
-      <legend><b>Estado:</b></legend>
-      <input [(ngModel)]="mood" id="moodPost" type="text" placeholder="¿Cómo te sientes?">
-    </div>
-  
-    <!-- Pie -->
-    <div class="post-footer">
-      <button (click)="submitPost()">Enviar</button>
+<div *ngIf="isModalVisible" class="overlay" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <div class="post-container">
+      <!-- Encabezado -->
+      <div class="post-header">
+        <input [(ngModel)]="postContent" name="content" id="contentPost" type="text"
+          placeholder="¿Quieres compartir algo?">
+      </div>
+
+      <!-- Contenido central -->
+      <div class="post-content">
+        <legend><b>Estado:</b></legend>
+        <input [(ngModel)]="mood" id="moodPost" type="text" placeholder="¿Cómo te sientes?">
+      </div>
+
+      <!-- Pie -->
+      <div class="post-footer">
+        <button (click)="submitPost()">Enviar</button>
+      </div>
     </div>
   </div>
-  
+</div>
