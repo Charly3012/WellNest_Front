@@ -1,9 +1,9 @@
 #goal-container {
-    width: 800px;
+    width: 97%;
     height: 400px;
     border-radius: 30px;
     margin-bottom: 20px;
-    background: var(--background-color); /* Fondo con opacidad */
+    background: var(--content-color); /* Fondo con opacidad */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacar el marco */
     display: flex;
     flex-direction: column;
